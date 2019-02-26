@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="com.internousdev.Ssite.action" extends="struts-default">
+		<!-- GoHomeAction -->
+		<action name="GoHomeAction" class="com.internousdev.Ssite.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<!-- HomeAction -->
+		<action name="HomeAction" class="com.internousdev.Ssite.action.HomeAction" method="execute">
+			<result name="login">login.jsp</result>
+			<result name="success">itemSelect.jsp</result>
+		</action>
+
+		<!-- ItemSelectAction -->
+		<action name="ItemSelectAction" class="com.internousdev.Ssite.action.ItemSelectAction" method="execute">
+			<result name="success">buyItem.jsp</result>
+		</action>
+
+		<!-- LoginAction -->
+		<action name="LoginAction" class="com.internousdev.Ssite.action.LoginAction" method="execute">
+			<result name="success">itemSelect.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="admin">admin.jsp</result>
+		</action>
+
+		<!-- UserCreateAction -->
+		<action name="UserCreateAction" class="com.internousdev.Ssite.action.UserCreateAction" method="execute">
+			<result name="success">userCreate.jsp</result>
+			<result name="back">login.jsp</result>
+		</action>
+
+		<!-- UserCreateConfirmAction -->
+		<action name="UserCreateConfirmAction" class="com.internousdev.Ssite.action.UserCreateConfirmAction" method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<!-- UserCreateCompleteAction -->
+		<action name="UserCreateCompleteAction" class="com.internousdev.Ssite.action.UserCreateCompleteAction" method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<!-- BuyItemAction -->
+		<action name="BuyItemAction" class="com.internousdev.Ssite.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+			<result name="error">buyItem.jsp</result>
+		</action>
+
+		<!-- BuyItemConfirmAction -->
+		<action name="BuyItemConfirmAction" class="com.internousdev.Ssite.action.BuyItemConfirmAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+			<result name="back">buyItem.jsp</result>
+		</action>
+
+		<!-- MyPageAction -->
+		<action name="MyPageAction" class="com.internousdev.Ssite.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- LogoutAction -->
+		<action name="LogoutAction" class="com.internousdev.Ssite.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<!-- AdminAction -->
+		<action name="AdminAction" class="com.internousdev.Ssite.action.AdminAction" method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">adminError.jsp</result>
+		</action>
+
+		<!-- ItemCreateAction -->
+		<action name="ItemCreateAction" class="com.internousdev.Ssite.action.ItemCreateAction" method="execute">
+			<result name="success">itemCreate.jsp</result>
+		</action>
+
+		<!-- ItemCreateConfirmAction -->
+		<action name="ItemCreateConfirmAction" class="com.internousdev.Ssite.action.ItemCreateConfirmAction" method="execute">
+			<result name="success">itemCreateConfirm.jsp</result>
+		</action>
+
+		<!-- ItemCreateCompleteAction -->
+		<action name="ItemCreateCompleteAction" class="com.internousdev.Ssite.action.ItemCreateCompleteAction" method="execute">
+			<result name="success">itemCreateComplete.jsp</result>
+		</action>
+
+		<!-- ItemListAction -->
+		<action name="ItemListAction" class="com.internousdev.Ssite.action.ItemListAction" method="execute">
+			<result name="success">itemList.jsp</result>
+		</action>
+
+		<!-- ItemListDeleteConfirmAction -->
+		<action name="ItemListDeleteConfirmAction" class="com.internousdev.Ssite.action.ItemListDeleteConfirmAction" method="execute">
+			<result name="success">itemListDeleteConfirm.jsp</result>
+		</action>
+
+		<!-- ItemListDeleteCompleteAction -->
+		<action name="ItemListDeleteCompleteAction" class="com.internousdev.Ssite.action.ItemListDeleteCompleteAction" method="execute">
+			<result name="success">itemListDeleteComplete.jsp</result>
+		</action>
+
+		<!-- UserListAction -->
+		<action name="UserListAction" class="com.internousdev.Ssite.action.UserListAction" method="execute">
+			<result name="success">userList.jsp</result>
+		</action>
+
+		<!-- UserListDeleteConfirmAction -->
+		<action name="UserListDeleteConfirmAction" class="com.internousdev.Ssite.action.UserListDeleteConfirmAction" method="execute">
+			<result name="success">userListDeleteConfirm.jsp</result>
+		</action>
+
+		<!-- UserListDeleteCompleteAction -->
+		<action name="UserListDeleteCompleteAction" class="com.internousdev.Ssite.action.UserListDeleteCompleteAction" method="execute">
+			<result name="success">userListDeleteComplete.jsp</result>
+		</action>
+
+		<!-- UserInfoUpdateAction -->
+		<action name="UserInfoUpdateAction" class="com.internousdev.Ssite.action.UserInfoUpdateAction" method="execute">
+			<result name="success">userInfoUpdate.jsp</result>
+		</action>
+
+		<!-- UserInfoUpdateConfirmAction -->
+		<action name="UserInfoUpdateConfirmAction" class="com.internousdev.Ssite.action.UserInfoUpdateConfirmAction" method="execute">
+			<result name="success">userInfoUpdateConfirm.jsp</result>
+			<result name="error">userInfoUpdateError.jsp</result>
+		</action>
+
+		<!-- UserInfoUpdatePasswordAction -->
+		<action name="UserInfoUpdatePasswordAction" class="com.internousdev.Ssite.action.UserInfoUpdatePasswordAction" method="execute">
+			<result name="success">userInfoUpdatePassword.jsp</result>
+			<result name="error">userInfoUpdatePasswordError.jsp</result>
+		</action>
+
+		<!-- UserInfoUpdateUserNameAction -->
+		<action name="UserInfoUpdateUserNameAction" class="com.internousdev.Ssite.action.UserInfoUpdateUserNameAction" method="execute">
+			<result name="success">userInfoUpdateUserName.jsp</result>
+			<result name="error">userInfoUpdateUserNameError.jsp</result>
+		</action>
+
+
+	</package>
+</struts>
